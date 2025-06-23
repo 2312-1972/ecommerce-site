@@ -12,18 +12,33 @@ Arborescence:
 
 ecommerce-site/
 ├── public/
+
 ├── src/
+
 │   ├── assets/
+
 │   ├── components/
+
 │   ├── pages/
+
 │   ├── redux/
+
 │   │   ├── store.js
+
 │   │   └── slices/
+
 │   ├── styles/
+
 │   │   └── main.scss
+
 │   ├── App.jsx
+
 │   ├── index.jsx
+
 │   └── routes.jsx
+
 ├── .env
+
 ├── package.json
+
 └── README.md

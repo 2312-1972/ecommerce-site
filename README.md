@@ -11,6 +11,7 @@ Routing : React Router.
 Arborescence:
 
 ecommerce-site/
+
 ├── public/
 
 ├── src/

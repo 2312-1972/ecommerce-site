@@ -11,9 +11,17 @@
     font-size: 1.8rem;
     font-weight: bold;
     background: linear-gradient(to right, #00d4ff, #7f00ff);
-    -webkit-background-clip: text;
+     background-clip: text;             // ✅ version standard
+  -webkit-background-clip: text;     // ✅ pour Safari/Chrome
     color: transparent;
   }
+  .user-email {
+  color: #00d4ff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+
 
   nav ul {
     list-style: none;

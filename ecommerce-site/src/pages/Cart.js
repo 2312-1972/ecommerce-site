@@ -33,11 +33,10 @@ const Cart = () => {
                     Supprimer
                   </button>
                   <div className="quantity-controls">
-  <button onClick={() => dispatch(decrementQuantity(item.id))}>−</button>
-  <span>{item.quantity}</span>
-  <button onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
-</div>
-
+                  <button onClick={() => dispatch(decrementQuantity(item.id))}>−</button>
+                  <span>{item.quantity}</span>
+                  <button onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
+                  </div>
                 </div>
               </li>
             ))}

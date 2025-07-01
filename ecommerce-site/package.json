@@ -11,11 +11,13 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "cra-template-redux": "2.0.0",
+    "firebase": "^11.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.6.2",
     "react-scripts": "^5.0.1",
+    "react-toastify": "^11.0.5",
     "sass": "^1.89.2",
     "web-vitals": "^5.0.3"
   },

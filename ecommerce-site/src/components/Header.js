@@ -31,7 +31,7 @@ const Header = () => {
           ) : (
             <>
               {/* 👇 Affichage du prénom s’il est disponible */}
-              <li className="user-email">Bienvenue, {user.firstName || user.email}</li>
+              <li className="user-email">Bienvenue, {user.firstName || user.email} !</li>
               <li><button onClick={handleLogout}>Déconnexion</button></li>
             </>
           )}

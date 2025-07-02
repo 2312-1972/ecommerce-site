@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import './Auth.scss';
 import { toast } from 'react-toastify';
 import { doc, getDoc } from 'firebase/firestore';
+import ToastParticles from '../components/ToastParticles';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -34,7 +35,13 @@ const Login = () => {
       }));
 
       // ✅ Notification et nettoyage
-      toast.success(`Bienvenue, ${firstName || user.email} !`);
+      toast.success(() => (
+  <>
+    <ToastParticles full />
+    <span>Bienvenue, {firstName} !</span>
+  </>
+));
+
       setEmail('');
       setPassword('');
       navigate('/');

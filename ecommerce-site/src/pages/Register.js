@@ -6,6 +6,8 @@ import { useNavigate } from 'react-router-dom';
 import './Auth.scss';
 import { toast } from 'react-toastify';
 
+import ToastParticles from '../components/ToastParticles';
+
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -38,7 +40,13 @@ console.log('Données envoyées à Firestore :', {
         address
       });
 
-      toast.success(`Bienvenue ${firstName}, votre compte a bien été créé !`);
+      toast.success(() => (
+  <>
+    <ToastParticles full />
+    <span>Bienvenue, {firstName} !</span>
+  </>
+));
+
 
       // Reset des champs
       setEmail('');

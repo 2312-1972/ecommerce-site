@@ -30,7 +30,8 @@ const Header = () => {
             </>
           ) : (
             <>
-              <li className="user-email">{user.email}</li>
+              {/* 👇 Affichage du prénom s’il est disponible */}
+              <li className="user-email">Bienvenue, {user.firstName || user.email}</li>
               <li><button onClick={handleLogout}>Déconnexion</button></li>
             </>
           )}

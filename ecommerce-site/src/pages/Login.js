@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../redux/slices/userSlice';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
 import { useNavigate } from 'react-router-dom';
 import './Auth.scss';
 import { toast } from 'react-toastify';
+import { doc, getDoc } from 'firebase/firestore';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -17,17 +18,23 @@ const Login = () => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
- const { uid, email: userEmail, displayName } = userCredential.user;
+      const user = userCredential.user;
 
-    dispatch(setUser({
-      uid,
-      email: userEmail,
-      displayName: displayName || '', // tu peux mettre '' si null
-    }));
-      
-     
+      // 🔍 Récupérer les données Firestore
+      const docRef = doc(db, 'users', user.uid);
+      const docSnap = await getDoc(docRef);
 
-      toast.success(`Bienvenue, ${userCredential.user.email} !`);
+      const firstName = docSnap.exists() ? docSnap.data().firstName : '';
+
+      // 📦 Stockage dans Redux
+      dispatch(setUser({
+        uid: user.uid,
+        email: user.email,
+        firstName: firstName || '',
+      }));
+
+      // ✅ Notification et nettoyage
+      toast.success(`Bienvenue, ${firstName || user.email} !`);
       setEmail('');
       setPassword('');
       navigate('/');

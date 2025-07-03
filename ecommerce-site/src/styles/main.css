@@ -1,16 +1,40 @@
+@font-face {
+  font-family: "Black Mango";
+  src: url("/fonts/BlackMango-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gabriel Sans";
+  src: url("/fonts/GabrielSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-bg: #21242a;
   --color-primary: #00d4ff;
   --color-secondary: #7f00ff;
   --color-text: #e0e0e0;
+  --font-title: "Black Mango", sans-serif;
+  --font-body: "Gabriel Sans", sans-serif;
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+}
+
+p, span, li, a, input, button, link {
+  font-family: var(--font-body);
 }
 
 .page-content {

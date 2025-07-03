@@ -1,0 +1,15 @@
+.title-spaced {
+  font-family: var(--font-title);
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 25px;
+  text-shadow: 0 0 2px rgb(240, 237, 75), 0 2px 8px rgb(253, 249, 253);
+  text-align: center;
+}
+
+.title-container {
+  border: 1px solid white;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px rgb(240, 237, 75), 0 2px 8px rgb(253, 249, 253);
+}/*# sourceMappingURL=Home.css.map */

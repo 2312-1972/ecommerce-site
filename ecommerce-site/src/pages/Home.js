@@ -1,7 +1,9 @@
+import "./Home.scss";
+
 const Home = () => {
   return (
-    <div>
-      <h1>Bienvenue sur notre boutique en ligne</h1>
+    <div className="title-container">
+      <h1 className="title-spaced">Bienvenue sur notre boutique en ligne</h1>
     </div>
   );
 };

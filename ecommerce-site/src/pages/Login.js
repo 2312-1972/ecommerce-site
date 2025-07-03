@@ -38,7 +38,7 @@ const Login = () => {
       toast.success(() => (
   <>
     <ToastParticles full />
-    <span>Bienvenue, {firstName} !</span>
+    <span className='neon-text ' >Bienvenue, {firstName} !</span>
   </>
 ));
 
@@ -46,7 +46,8 @@ const Login = () => {
       setPassword('');
       navigate('/');
     } catch (error) {
-      toast.error('Erreur de connexion. Vérifiez vos identifiants.');
+      toast.error(<span className="neon-text" >erreur d'identifiants </span>);
+
     }
   };
 

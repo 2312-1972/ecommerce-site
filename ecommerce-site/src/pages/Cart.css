@@ -1,0 +1,71 @@
+.cart-page h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00d4ff;
+}
+.cart-page .cart-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.cart-page .cart-item {
+  display: flex;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, #1c1c1c, #2a2a2a);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+}
+.cart-page .cart-item img {
+  width: 120px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+.cart-page .cart-item .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cart-page .cart-item .details h3 {
+  margin: 0;
+  color: var(--color-text);
+}
+.cart-page .cart-item .details p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+.cart-page .cart-item .details button {
+  margin-top: 0.5rem;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  border: none;
+  padding: 0.4rem 1rem;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.cart-page .cart-item .details button:hover {
+  opacity: 0.9;
+}
+.cart-page .cart-total {
+  text-align: right;
+  margin-top: 2rem;
+}
+.cart-page .cart-total h2 {
+  color: #00d4ff;
+}
+.cart-page .cart-total button {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cart-page .cart-total button:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=Cart.css.map */

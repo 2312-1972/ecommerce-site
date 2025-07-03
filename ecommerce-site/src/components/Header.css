@@ -1,0 +1,48 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.2);
+  color: var(--color-text);
+}
+.main-header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #00d4ff, #7f00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.main-header .user-email {
+  color: #00d4ff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 1rem;
+}
+.main-header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.main-header nav ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.3s;
+}
+.main-header nav ul li a:hover {
+  color: #00d4ff;
+}
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+  }
+  .main-header .logo {
+    margin-bottom: 1rem;
+  }
+  .main-header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}/*# sourceMappingURL=Header.css.map */

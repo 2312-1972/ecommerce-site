@@ -1,25 +1,11 @@
-@font-face {
-  font-family: 'Black Mango';
-  src: url('/fonts/BlackMango-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Gabriel Sans';
-  src: url('/fonts/GabrielSans-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://db.onlinewebfonts.com/c/1be24cb794e05db5c90a6b24da7ed1c2?family=Black+Mango');
+@import url('https://db.onlinewebfonts.com/c/03a9d7f1923574b7a883f52caca97d83?family=Gabriel+Sans-Trial');
 
 :root {
   --color-bg: #21242a;
   --color-primary: #00d4ff;
   --color-secondary: #7f00ff;
   --color-text: #e0e0e0;
-
   --font-title: 'Black Mango', sans-serif;
   --font-body: 'Gabriel Sans', sans-serif;
 }

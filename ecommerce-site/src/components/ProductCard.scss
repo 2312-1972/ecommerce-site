@@ -45,11 +45,28 @@
       color: white;
       text-decoration: none;
       font-size: 0.9rem;
-      transition: 0.3s ease;
+      transition: 0.2s ease;
 
       &:hover {
         opacity: 0.9;
         transform: scale(1.05);
+      }
+    }
+     .add-to-cart-btn {
+      background: linear-gradient(to right, #00d4ff, #7f00ff);
+      border: none;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.05);
+        background: linear-gradient(to right, #ff5a57, #e02f75);
+        color: whitesmoke;
+        border: 1px solid whitesmoke;
       }
     }
   }

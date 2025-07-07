@@ -31,7 +31,7 @@
   background: linear-gradient(to right, #00d4ff, #7f00ff);
   border: none;
   color: white;
-  padding: 0.8rem 2rem;
+  padding: 0.4rem 0.8rem;
   font-size: 1rem;
   border-radius: 25px;
   cursor: pointer;
@@ -39,4 +39,5 @@
 }
 .product-detail .info .add-to-cart-btn:hover {
   transform: scale(1.05);
+  background: linear-gradient(to right, #ff5a57, #e02f75);
 }/*# sourceMappingURL=Product.css.map */

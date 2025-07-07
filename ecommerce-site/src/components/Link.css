@@ -1,0 +1,78 @@
+@charset "UTF-8";
+body {
+  min-height: 100vh;
+  background: #18191f;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+#instagram,
+#x-twitter,
+#github,
+#tiktok,
+#contact {
+  font-size: 4em;
+  background-color: #18191f;
+  color: #fff;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5019607843), 10px 1px 12px rgba(0, 0, 0, 0.5019607843), 2px 2px 10px rgba(0, 0, 0, 0.5019607843), 2px 2px 3px rgba(0, 0, 0, 0.5019607843), inset 2px 2px 10px rgba(0, 0, 0, 0.5019607843), inset 2px 2px 10px rgba(0, 0, 0, 0.5019607843), inset 2px 2px 10px rgba(0, 0, 0, 0.5019607843), inset 2px 2px 10px rgba(0, 0, 0, 0.5019607843);
+  border-radius: 29px;
+  padding: 11px 19px;
+  margin: 0 10px;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: animate 3s linear infinite;
+  text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 50px #0072ff, 0 0 100px #0072ff;
+}
+
+#twitter {
+  animation-delay: 0.3s;
+}
+
+#github {
+  animation-delay: 0.1s;
+}
+
+.container i:hover,
+.container i:focus-visible {
+  transform: translateY(-4px) scale(1.08);
+  filter: hue-rotate(60°) drop-shadow(0 0 0.6rem var(--glow));
+}
+
+@keyframes animate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+@media (min-width: 768px) {
+  #instagram,
+  #x-twitter,
+  #github {
+    font-size: 6em;
+    margin: 0 20px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  #instagram,
+  #x-twitter,
+  #github {
+    font-size: 8em;
+    margin: 0 40px;
+  }
+  .container {
+    flex-wrap: nowrap;
+  }
+}/*# sourceMappingURL=Link.css.map */

@@ -1,0 +1,32 @@
+.theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: var(--toggle-background, var(--color-secondary)); /* Utilisation de la variable avec une valeur par défaut */
+  color: var(--toggle-color, var(--color-bg));
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  border: 1px solid;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px var(--toggle-background);
+  transition: background 0.3s, color 0.3s;
+
+  &:hover {
+    background: linear-gradient(to right, #00d4ff, #7f00ff);
+    color: white;
+  }
+}
+
+[data-theme='dark'] .theme-toggle {
+  --toggle-background: #333;
+  --toggle-color: #fff;
+  --toggle-border: #fff;
+}
+
+[data-theme='light'] .theme-toggle {
+  --toggle-background: #fff;
+  --toggle-color: #000;
+  --toggle-border: #000;
+}

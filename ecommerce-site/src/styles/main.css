@@ -1,12 +1,26 @@
 @import url("https://db.onlinewebfonts.com/c/1be24cb794e05db5c90a6b24da7ed1c2?family=Black+Mango");
 @import url("https://db.onlinewebfonts.com/c/03a9d7f1923574b7a883f52caca97d83?family=Gabriel+Sans-Trial");
 :root {
-  --color-bg: #21242a;
-  --color-primary: #00d4ff;
-  --color-secondary: #7f00ff;
-  --color-text: #e0e0e0;
   --font-title: "Black Mango", sans-serif;
   --font-body: "Gabriel Sans", sans-serif;
+}
+
+[data-theme=dark] {
+  --color-bg: #21242a;
+  --color-text: #e0e0e0;
+  --color-primary: #00d4ff;
+  --color-secondary: #7f00ff;
+  --color-title-glow1: #0ff;
+  --color-title-glow2: #0ff;
+}
+
+[data-theme=light] {
+  --color-bg: #b9b3b3;
+  --color-text: #e0e0e0;
+  --color-primary: #a0a1a3;
+  --color-secondary: #7d7c7e;
+  --color-title-glow1:#0f0f0f ;
+  --color-title-glow2:#0c0c0c ;
 }
 
 body {
@@ -15,6 +29,7 @@ body {
   font-family: var(--font-body);
   margin: 0;
   padding: 0;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {

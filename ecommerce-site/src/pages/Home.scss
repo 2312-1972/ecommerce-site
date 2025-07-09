@@ -5,49 +5,22 @@
   font-size: 25px;
   text-align: center;
   text-transform: uppercase;
+  text-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+ }
+[data-theme='light'] .title-spaced {
+  color: #0ff;
   text-shadow:
-    0 0 5px #0ff,
-    0 0 10px #0ff,
-    0 0 20px #0ff,
-    0 0 40px #f0f,
-    0 0 80px #f0f;
-
-  animation: neonPulse 1.8s infinite alternate ease-in-out,
-             floatText 4s ease-in-out infinite;
+    0 0 4px #333333,
+    0 2px 8px #555555,
+    4px 8px 12px #030303;
 }
-
-@keyframes neonPulse {
-  from {
-    text-shadow:
-      0 0 5px #0ff,
-      0 0 10px #0ff,
-      0 0 20px #0ff,
-      0 0 40px #f0f,
-      0 0 80px #f0f;
-  }
-  to {
-    text-shadow:
-      0 0 10px #0ff,
-      0 0 20px #0ff,
-      0 0 30px #0ff,
-      0 0 60px #f0f,
-      0 0 100px #f0f;
-  }
+ .title-container {
+  border: 1px solid var(--color-title-glow2);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 4px 6px var(--color-title-glow2),
+    0 6px 8px var(--color-title-glow1);
+  transition: var(--transition);
 }
-
-@keyframes floatText {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-  .title-container{
-    border: 1px solid white;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 5px rgb(240, 237, 75), 0 2px 8px rgb(253, 249, 253);
-    
-  }

@@ -69,5 +69,64 @@
         border: 1px solid whitesmoke;
       }
     }
+  .share-btn {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #00d4ff;
+  cursor: pointer;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.2);
+    color: #ff5a57;
   }
+
+  &::after {
+    content: 'Partager';
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    border-radius: 4px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+
+  }
+  .share-menu {
+  display: flex;
+  gap: 0.4rem;
+  background: rgba(247, 243, 243, 0.7);
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  margin-top: 0.6rem;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 5;
+
+  a {
+    color: #fff;
+    font-size: 1.1rem;
+
+    &:hover {
+      color: #00e6f6;
+      transform: scale(1.2);
+    }
+  }
+}
+
 }

@@ -18,6 +18,6 @@
   border-radius: 20px;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 6px var(--color-title-glow2), 0 6px 8px var(--color-title-glow1);
+  box-shadow: 0 1px 6px var(--color-title-glow2), 0 1px 6px var(--color-title-glow1);
   transition: var(--transition);
 }/*# sourceMappingURL=Home.css.map */

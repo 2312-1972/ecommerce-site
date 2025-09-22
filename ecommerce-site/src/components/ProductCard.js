@@ -19,7 +19,24 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      <img src={product.image} alt={product.name} />
+      
+      {product.image.endsWith('.mp4') ? (
+        <video 
+          src={product.image} 
+          width="100%" 
+          loop 
+          muted 
+          autoPlay 
+          playsInline
+          className="product-media" 
+        >
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+      ) : (
+        <img src={product.image} alt={product.name} className="product-media" />
+      )}
+      
+
       <h3>{product.name}</h3>
       <p>{product.description}</p>
 

@@ -5,6 +5,7 @@ const products = [
     price: 14.74,
     image: 'https://img.kwcdn.com/product/fancy/f1c46fad-fee9-408b-b704-46759ab7eaed.jpg?imageView2/2/w/1300/q/90/format/webp',
     description: 'Lampe LED tactile rechargeable avec plusieurs couleurs.',
+    variants: [],
   },
   {
     id: '2',
@@ -12,6 +13,7 @@ const products = [
     price: 9.93,
     image: 'https://img.kwcdn.com/product/fancy/76e50263-4bdc-41e1-95a1-ca51a784e72e.jpg?imageView2/2/w/1300/q/90/format/webp',
     description: 'Support magnétique universel avec rotation 360°.',
+    variants: [],
   },
   {
     id: '3',
@@ -61,6 +63,33 @@ const products = [
     price: 7.99,
     image: 'https://img.kwcdn.com/product/open/f50d2ba798024d6983e191d157d5a88d-goods.jpeg?imageView2/2/w/800/q/70/format/avif',
     description: ' logo Ripple XRP pour hommes et femmes - Snapback réglable, polyester léger, design ventilé respirant,  style casual streetwear, 100 % fibre de polyester,lavable en machine, ne pas nettoyer à sec',
+    variants: [
+      { 
+      name: 'Noire', 
+      colorCode: '#070707ff',
+      image: 'https://img.kwcdn.com/product/open/f50d2ba798024d6983e191d157d5a88d-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+    },
+    { 
+      name: 'Blanc', 
+      colorCode: '#FFFFFF',
+      image: 'https://img.kwcdn.com/product/open/3547ee7f55424062a5cc1b04c23be26c-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+    },
+    { 
+      name: 'Bleue', 
+      colorCode: '#051392ff',
+      image: 'https://img.kwcdn.com/product/open/52297c66ea8a4cf19045cd209f1a5ae8-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+    },
+    { 
+      name: 'Gris foncé', 
+      colorCode: '#5f6069ff',
+      image: 'https://img.kwcdn.com/product/open/a94ba9ca82f546d2adde72986b8cab82-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+    },
+    { 
+      name: 'Rose', 
+      colorCode: '#FFC0CB',
+      image: 'https://img.kwcdn.com/product/open/c943292129104ebaa50cd5b8d7aa4783-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+    }
+  ]
   },
   {
     id: '10',
@@ -71,7 +100,7 @@ const products = [
   },
   {
     id: '11',
-    name: 'SCasquette ETHEREUM',
+    name: 'Casquette ETHEREUM',
     price: 7.99,
     image: 'https://img.kwcdn.com/product/open/da1628523ddb46768c81a5ae4df0d492-goods.jpeg?imageView2/2/w/800/q/70/format/avif',
     description: 'logo BITCOIN pour hommes et femmes - Snapback réglable, polyester léger, design ventilé respirant,  style casual streetwear, 100 % fibre de polyester,lavable en machine, ne pas nettoyer à sec.',

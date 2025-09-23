@@ -1,6 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart, clearCart, incrementQuantity,
-  decrementQuantity } from '../redux/slices/cartSlice';
+import { 
+  removeFromCart, 
+  clearCart, 
+  incrementQuantity,
+  decrementQuantity 
+} from '../redux/slices/cartSlice';
 import './Cart.scss';
 
 const Cart = () => {
@@ -22,21 +26,32 @@ const Cart = () => {
         <>
           <ul className="cart-list">
             {cartItems.map((item) => (
-              <li key={item.id} className="cart-item">
+              <li key={item.cartItemId} className="cart-item">
                 <img src={item.image} alt={item.name} />
                 <div className="details">
                   <h3>{item.name}</h3>
+                  
+                  {/* Affiche la couleur si une variante a été sélectionnée */}
+                  {item.selectedVariant && (
+                    <p className="cart-item-variant">
+                      Couleur : {item.selectedVariant.name}
+                    </p>
+                  )}
+                  
                   <p>Prix unitaire : {item.price.toFixed(2)} €</p>
-                  <p>Quantité : {item.quantity}</p>
-                  <p>Total : {(item.price * item.quantity).toFixed(2)} €</p>
-                  <button onClick={() => dispatch(removeFromCart(item.id))}>
+                  
+                  <div className="quantity-controls">
+                    <p>Quantité :</p>
+                    <button onClick={() => dispatch(decrementQuantity(item.cartItemId))}>−</button>
+                    <span>{item.quantity}</span>
+                    <button onClick={() => dispatch(incrementQuantity(item.cartItemId))}>+</button>
+                  </div>
+
+                  <p className="item-total">Total : {(item.price * item.quantity).toFixed(2)} €</p>
+                  
+                  <button className="remove-btn" onClick={() => dispatch(removeFromCart(item.cartItemId))}>
                     Supprimer
                   </button>
-                  <div className="quantity-controls">
-                  <button onClick={() => dispatch(decrementQuantity(item.id))}>−</button>
-                  <span>{item.quantity}</span>
-                  <button onClick={() => dispatch(incrementQuantity(item.id))}>+</button>
-                  </div>
                 </div>
               </li>
             ))}
@@ -44,11 +59,11 @@ const Cart = () => {
 
           <div className="cart-total">
             <h2>Total général : {totalPrice.toFixed(2)} €</h2>
-            <button onClick={() => dispatch(clearCart())}>Vider le panier</button>
+            <button className="clear-cart-btn" onClick={() => dispatch(clearCart())}>
+              Vider le panier
+            </button>
           </div>
-          
         </>
-        
       )}
     </div>
   );

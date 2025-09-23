@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/slices/cartSlice';
 import { toast } from 'react-toastify';
@@ -10,40 +10,84 @@ const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const [showShare, setShowShare] = useState(false);
 
+  // --- 1. GESTION DE LA COULEUR SÉLECTIONNÉE ---
+  const [selectedVariant, setSelectedVariant] = useState(null);
+
+  useEffect(() => {
+    // Définit la première couleur comme sélection par défaut
+    if (product.variants && product.variants.length > 0) {
+      setSelectedVariant(product.variants[0]);
+    }
+  }, [product]);
+  // ---------------------------------------------
+
   const handleAddToCart = () => {
-    dispatch(addToCart({ ...product, quantity: 1 }));
-    toast.success(`${product.name} ajouté au panier !`);
+    const imageToSend = selectedVariant ? selectedVariant.image : product.image;
+    
+    dispatch(addToCart({
+      ...product,
+      quantity: 1,
+      image: imageToSend,
+      selectedVariant: selectedVariant
+    }));
+
+    const variantName = selectedVariant ? `(${selectedVariant.name})` : '';
+    toast.success(`${product.name} ${variantName} ajouté au panier !`);
   };
 
   const urls = getShareUrls(product);
 
+  // --- 2. LOGIQUE POUR CHOISIR LE MÉDIA À AFFICHER (IMAGE OU VIDÉO) ---
+  const displayMediaUrl = selectedVariant ? selectedVariant.image : product.image;
+  const isVideo = displayMediaUrl && displayMediaUrl.endsWith('.mp4');
+  // --------------------------------------------------------------------
+
   return (
     <div className="product-card">
-      
-      {product.image.endsWith('.mp4') ? (
+      {/* --- 3. AFFICHAGE CONDITIONNEL DU MÉDIA --- */}
+      {isVideo ? (
         <video 
-          src={product.image} 
+          src={displayMediaUrl} 
           width="100%" 
           loop 
           muted 
           autoPlay 
           playsInline
-          className="product-media" 
+          className="product-media"
         >
           Votre navigateur ne supporte pas la vidéo.
         </video>
       ) : (
-        <img src={product.image} alt={product.name} className="product-media" />
+        <img src={displayMediaUrl} alt={`${product.name} - ${selectedVariant?.name || ''}`} className="product-media" />
       )}
-      
+      {/* ------------------------------------------- */}
 
       <h3>{product.name}</h3>
+
+      {/* --- 4. AFFICHAGE DES PASTILLES DE COULEUR --- */}
+      {product.variants && product.variants.length > 0 && (
+        <div className="color-swatches">
+          {product.variants.map((variant) => (
+            <button
+              key={variant.name}
+              className={`swatch ${selectedVariant?.name === variant.name ? 'selected' : ''}`}
+              style={{ backgroundColor: variant.colorCode }}
+              onClick={() => setSelectedVariant(variant)}
+              aria-label={`Choisir la couleur ${variant.name}`}
+            />
+          ))}
+        </div>
+      )}
+      {/* -------------------------------------------- */}
+
       <p>{product.description}</p>
 
       <div className="card-footer">
         <span className="price">{product.price.toFixed(2)} €</span>
         <Link to={`/product/${product.id}`} className="buy-btn">Voir</Link>
-        <button onClick={handleAddToCart} className="add-to-cart-btn">Ajouter</button>
+        <button onClick={handleAddToCart} className="add-to-cart-btn" disabled={product.variants && !selectedVariant}>
+          Ajouter
+        </button>
         <button className="share-btn" onClick={() => setShowShare(!showShare)}>
           <i className="fas fa-share-alt"></i>
         </button>

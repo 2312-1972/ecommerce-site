@@ -25,7 +25,34 @@
     color: #aaa;
     flex-grow: 1;
   }
+// Dans votre fichier ProductCard.scss
 
+.color-swatches {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  // Style pour la pastille sélectionnée
+  &.selected {
+    border-color: #333;
+    outline: 2px solid #fff;
+    box-shadow: 0 0 0 2px #333;
+  }
+}
   .card-footer {
     display: flex;
     justify-content: space-between;

@@ -49,6 +49,19 @@ const products = [
     price: 8.99,
     image: '/565c8a38d37948f4bab6c5782efde0cc69a5022c.f30.mp4',
     description: 'Or ou ARGENT-pièces de collection Bitcoin - Emballage de protection contre la poussière, fournitures pour événements et fêtes, pièces commémoratives de Bitcoin.',
+     variants: [
+      { 
+      name: 'OR', 
+      colorCode: '#CFB53B',
+      image: '/565c8a38d37948f4bab6c5782efde0cc69a5022c.f30.mp4'
+    },
+    { 
+      name: 'Argent', 
+      colorCode: '#A9A9A9',
+      image: 'https://img.kwcdn.com/product/open/3547ee7f55424062a5cc1b04c23be26c-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+    },
+   
+  ]
   },
   {
     id: '8',
@@ -56,12 +69,13 @@ const products = [
     price: 4.99,
     image: 'https://img.kwcdn.com/product/fmket/5d08cf1fed9abb6b9dbaaeebf1965e37.jpg?imageView2/2/w/800/q/70/format/avif',
     description: 'pièce de Décoration de Ripple, XRP Coin, couleur-OR- Emballage de protection contre la poussière, fournitures pour événements et fêtes.',
+    variants: [],
   },
   {
     id: '9',
     name: 'Casquette XRP Ripple',
     price: 7.99,
-    image: 'https://img.kwcdn.com/product/open/f50d2ba798024d6983e191d157d5a88d-goods.jpeg?imageView2/2/w/800/q/70/format/avif',
+    image: '/Cryptos/XRP/casquette-XRP-Noire.avif',
     description: ' logo Ripple XRP pour hommes et femmes - Snapback réglable, polyester léger, design ventilé respirant,  style casual streetwear, 100 % fibre de polyester,lavable en machine, ne pas nettoyer à sec',
     variants: [
       { 
@@ -72,22 +86,22 @@ const products = [
     { 
       name: 'Blanc', 
       colorCode: '#FFFFFF',
-      image: 'https://img.kwcdn.com/product/open/3547ee7f55424062a5cc1b04c23be26c-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+      image: '/Cryptos/XRP/casquette-XRP-Blanche.avif'
     },
     { 
       name: 'Bleue', 
       colorCode: '#051392ff',
-      image: 'https://img.kwcdn.com/product/open/52297c66ea8a4cf19045cd209f1a5ae8-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+      image: '/Cryptos/XRP/casquette-XRP-Bleue.avif'
     },
     { 
       name: 'Gris foncé', 
       colorCode: '#5f6069ff',
-      image: 'https://img.kwcdn.com/product/open/a94ba9ca82f546d2adde72986b8cab82-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+      image: '/Cryptos/XRP/casquette-XRP-GrisFoncé.avif'
     },
     { 
       name: 'Rose', 
       colorCode: '#FFC0CB',
-      image: 'https://img.kwcdn.com/product/open/c943292129104ebaa50cd5b8d7aa4783-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+      image: '/Cryptos/XRP/casquette-XRP-Rose.avif'
     }
   ]
   },
@@ -95,15 +109,69 @@ const products = [
     id: '10',
     name: 'Casquette BITCOIN',
     price: 7.99,
-    image: 'https://img.kwcdn.com/product/open/614d47afa9f744eebb2474cf5766f3b1-goods.jpeg?imageView2/2/w/800/q/70/format/avif',
+    image: '/Cryptos/Btc/casquette-BTC-Noire.avif',
     description: ' logo BITCOIN pour hommes et femmes - Snapback réglable, polyester léger, design ventilé respirant,  style casual streetwear, 100 % fibre de polyester,lavable en machine, ne pas nettoyer à sec.',
+     variants: [
+      { 
+      name: 'Noire', 
+      colorCode: '#070707ff',
+      image: '/Cryptos/Btc/casquette-BTC-Noire.avif'
+    },
+    { 
+      name: 'Blanc', 
+      colorCode: '#FFFFFF',
+      image: '/Cryptos/Btc/casquette-BTC-Blanche.avif'
+    },
+    { 
+      name: 'Bleue', 
+      colorCode: '#051392ff',
+      image: '/Cryptos/Btc/casquette-BTC-Bleue.avif'
+    },
+    { 
+      name: 'Gris foncé', 
+      colorCode: '#5f6069ff',
+      image: '/Cryptos/Btc/casquette-BTC-GrisFoncé.avif'
+    },
+    { 
+      name: 'Rose', 
+      colorCode: '#FFC0CB',
+      image: '/Cryptos/Btc/casquette-BTC-Rose.avif'
+    }
+  ]
   },
   {
     id: '11',
     name: 'Casquette ETHEREUM',
     price: 7.99,
-    image: 'https://img.kwcdn.com/product/open/da1628523ddb46768c81a5ae4df0d492-goods.jpeg?imageView2/2/w/800/q/70/format/avif',
+    image: '/Cryptos/Ethereum/casquette-ETH-Noire.avif',
     description: 'logo BITCOIN pour hommes et femmes - Snapback réglable, polyester léger, design ventilé respirant,  style casual streetwear, 100 % fibre de polyester,lavable en machine, ne pas nettoyer à sec.',
+     variants: [
+      { 
+      name: 'Noire', 
+      colorCode: '#070707ff',
+      image: '/Cryptos/Ethereum/casquette-ETH-Noire.avif'
+    },
+    { 
+      name: 'Blanc', 
+      colorCode: '#FFFFFF',
+      image: '/Cryptos/Ethereum/casquette-ETH-Blanche.avif'
+    },
+    { 
+      name: 'Bleue', 
+      colorCode: '#051392ff',
+      image: '/Cryptos/Ethereum/casquette-ETH-Bleue.avif'
+    },
+    { 
+      name: 'Gris foncé', 
+      colorCode: '#5f6069ff',
+      image: '/Cryptos/Ethereum/casquette-ETH-GrisFoncé.avif'
+    },
+    { 
+      name: 'Rose', 
+      colorCode: '#FFC0CB',
+      image: '/Cryptos/Ethereum/casquette-ETH-Rose.avif'
+    }
+  ]
   },
   {
     id: '12',
@@ -111,6 +179,7 @@ const products = [
     price: 14.28,
     image: 'https://img.kwcdn.com/product/fancy/3908be08-a57f-4a37-8fd8-4a71de7ccafa.jpg?imageView2/2/w/800/q/70/format/avif',
     description: 'pièce de Décoration de SHIBAINU Coin, couleur-OR ou AGENT- Emballage de protection contre la poussière, fournitures pour événements et fêtes.',
+    variants: [],
   }
 ];
 

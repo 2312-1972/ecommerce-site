@@ -1,16 +1,16 @@
-import { useState, useMemo } from 'react'; // 1. On importe les outils de React
+import { useState, useMemo } from 'react'; 
 import products from '../data/products';
 import ProductCard from '../components/ProductCard';
 import './Shop.scss';
 
 const Shop = () => {
-  // 2. On ajoute les états pour la recherche et la catégorie
+  // . On ajoute les états pour la recherche et la catégorie
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Tous');
 
   const categories = ['Tous', 'Cryptos', 'High-Tech', 'Tips'];
 
-  // 3. On ajoute la logique pour filtrer les produits
+  // . On ajoute la logique pour filtrer les produits
   const filteredProducts = useMemo(() => {
     return products
       .filter((product) => {
@@ -30,7 +30,7 @@ const Shop = () => {
     <div className="shop-page">
       <h1>Boutique</h1>
 
-      {/* 4. On ajoute les éléments de l'interface pour les filtres */}
+      {/* . ajout des éléments de l'interface pour les filtres */}
       <div className="filters-container">
         <input
           type="text"
@@ -52,7 +52,7 @@ const Shop = () => {
         </div>
       </div>
 
-      {/* 5. On CONSERVE votre "product-grid" et on l'utilise avec les produits filtrés */}
+      {/* . On CONSERVE  "product-grid" et on l'utilise avec les produits filtrés */}
       <div className="product-grid">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => (

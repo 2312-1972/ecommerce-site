@@ -90,7 +90,8 @@ const products = [
       { 
       name: 'Noire', 
       colorCode: '#070707ff',
-      image: 'https://img.kwcdn.com/product/open/f50d2ba798024d6983e191d157d5a88d-goods.jpeg?imageView2/2/w/800/q/70/format/avif'
+      image: '/Cryptos/XRP/casquette-XRP-Noire.avif',
+            
     },
     { 
       name: 'Blanc', 
